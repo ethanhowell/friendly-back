@@ -46,7 +46,7 @@ var api = new ParseServer({
   masterKey: process.env.MASTER_KEY || '', //Add your master key here. Keep it secret!
   push: pushConfig,
   filesAdapter: filesAdapter,
-  liveQuery: { classNames: ["Message"]},
+  liveQuery: { classNames: ["Message", "Group"]},
   publicServerURL: process.env.SERVER_URL || 'http://localhost/parse',
   serverURL: process.env.SERVER_URL || 'http://localhost/parse'  // needed for Parse Cloud and push notifications
 });
@@ -65,7 +65,7 @@ app.use(mountPath, api);
 
 // Parse Server plays nicely with the rest of your web routes
 app.get('/', function(req, res) {
-  res.status(200).send('I dream of being a website.  Please star the parse-server repo on GitHub!');
+  res.status(200).send('Download the Friendly app today!');
 });
 
 var port = process.env.PORT || 1337;
