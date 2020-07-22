@@ -46,7 +46,7 @@ var api = new ParseServer({
   masterKey: process.env.MASTER_KEY || '', //Add your master key here. Keep it secret!
   push: pushConfig,
   filesAdapter: filesAdapter,
-  liveQuery: { classNames: ["Message", "Group"]},
+  liveQuery: { classNames: ["Message", "Group", "Group__User"]},
   publicServerURL: process.env.SERVER_URL || 'http://localhost/parse',
   serverURL: process.env.SERVER_URL || 'http://localhost/parse'  // needed for Parse Cloud and push notifications
 });
